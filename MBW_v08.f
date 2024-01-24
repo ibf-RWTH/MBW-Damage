@@ -598,7 +598,7 @@ C       Calculating the principal stress values
         SP3 = SI1/three + twoThirds*sqrt(SI1*SI1-three*SI2)
      1                   *cos(twoThirds*pi-alpha2/three)
 C       Fetching the highest of the principal stress values
-        sigmamax = max(abs(SP1),abs(SP2),abs(SP3))
+        sigmamax = max(SP1,SP2,SP3)
         stateNew(i,26) = sigmamax
 c
 C       Brittle damage
